@@ -12,4 +12,4 @@ git clone $LDAP_MODULE_URI tmp/nginx-auth-ldap
 
 cd tmp
 tar xf "$NGINX_FILENAME"
-
+cd "nginx-$NGINX_VER"
