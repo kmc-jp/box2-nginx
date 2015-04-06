@@ -12,6 +12,7 @@ install:
   - sudo mkdir -p /etc/nginx/ssl/
   - sudo mv server.crt /etc/nginx/ssl/server.crt
   - sudo mv server.key /etc/nginx/ssl/server.key
+  - cd ../../
   - sudo cp nginx.conf /etc/nginx/nginx.conf
 script:
   - sudo /opt/nginx/sbin/nginx -t
