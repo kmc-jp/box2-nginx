@@ -6,8 +6,7 @@ install:
   - . pre.sh
   - . ../../build.sh
   - openssl genrsa -out server.key 512 # make OREORE crt to success nginx -t
-  - echo jp > expect
-  - for i in `seq 1 10`; echo >> expect
+  - echo -e jp\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n > expect
   - cat expect | openssl req -new -key server.key -out server.csr
   - openssl x509 -days 3650 -req -signkey server.key -in server.csr -out server.crt
   - sudo mv server.crt /etc/nginx/ssl/server.crt
